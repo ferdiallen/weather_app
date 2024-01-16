@@ -39,6 +39,11 @@ class MainViewModel @Inject constructor(
         _isServiceAvailable.update {
             data
         }
+        if(!data){
+            _weatherInfoState.update {
+                WeatherInfoState.ERROR
+            }
+        }
     }
 
     init {

@@ -237,7 +237,7 @@ fun MainScreen(
     }
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
         AnimatedVisibility(
-            visible = weatherInfoState == WeatherInfoState.LOADING,
+            visible = weatherInfoState == WeatherInfoState.LOADING && serviceState,
             modifier = Modifier.wrapContentSize(),
             exit = fadeOut(tween(100))
         ) {
